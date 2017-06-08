@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Informação Empresas</title>
+    <link rel="stylesheet" href="source/css/foundation.css">
+
+    <link rel="stylesheet" href="source/css/informacaoEmpresa.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-site">
+
+        <div class="ats-container--paginaInterna">
+            <section class="ats-header-banner">
+                <div class="row">
+                    <div class="columns small-12 medium-4">
+                        <div class="ats-containerIlus">
+                            <div class="ats-ilustracao"></div>
+                        </div>
+                    </div>
+                    <div class="columns small-12 medium-8 ats-header-bannerContent">
+                        <h1 class="ats-header-bannerTit">Você escolheu ver informações sobre:</h1>
+                        <form action="#" class="ats-header-bannerForm">
+                            <div class="row">
+                                <div class="columns small-12 medium-3">
+                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Tipo de Transação</label>
+                                    <select name="tipo-transacao" id="selectTpTransacao" class="ats-header-bannerSelect">
+                                  <option value="abertura">Abertura</option>
+                                  <option value="baixa">Baixa</option>
+                                  <option value="alteracao">Alteração</option>
+                              </select>
+                                </div>
+                                <div class="columns small-12 medium-3">
+                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Tipo de Empresa</label>
+                                    <select name="tipo-empresa" id="selectTpEmpresa" class="ats-header-bannerSelect">
+                                  <option value="matriz">Matriz</option>
+                                  <option value="filial">Filial</option>
+                                  <option value="mei">Mei</option>
+                              </select>
+                                </div>
+                                <div class="columns small-12 medium-4">
+                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Município</label>
+                                    <select name="tipo-municipio" id="selectMunicipio" class="ats-header-bannerSelect">
+                                  <option value="rioDeJaneiro">Rio de Janeiro</option>
+                                  <option value="outrosMunicipios">Outros Municípios</option>
+                              </select>
+                                </div>
+                                <div class="columns small-12 medium-2">
+                                    <button type="submit" class="ats-botao--azul u-md-txtBtn ats-btn ats-btn--tamanhoCampo" id="mudarInformacoesBtn">Mudar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="containerInformacoesCards" class="ats-infoContainer">
+                <div class="row">
+                    <div class="columns small-12" id="containerInformacoes">
+                        <script type="text/template" id="erro">
+                            <section class="ats-alerta" id="containerErro">
+                                <div class="ats-alertaBox--erro ats-alertaBox alert-box">
+                                    <span class="ats-alertaBox-icone ats-alertaBox-icone--erro icon-blocked"></span>
+                                    <section class="ats-alertaBox-conteudo">
+                                        <p class="ats-alertaBox-txt ats-alertaBox-txtErro u-bold">Não foram encontradas informações sobre as seguintes opções:</p>
+                                        <ul class="u-xsm-margemTop">
+                                            <li id="tipoTransacao" class="u-md-texto"></li>
+                                            <li id="tipEmpresa" class="u-md-texto"></li>
+                                            <li id="tipoMunicipio" class="u-md-texto"></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </section>
+                        </script>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
