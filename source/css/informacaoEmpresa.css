@@ -1,9 +1,5 @@
-/*=== estilo página de informações de empresas ===*/
-
 body {
     font: 12px/1.5 'Open Sans', sans-serif;
-    /*overflow-y: auto;*/
-    background: #4354A6;
     overflow-x: hidden;
     -webkit-animation: androidbugfix infinite 1s;
     height: 100%;
