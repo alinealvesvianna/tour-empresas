@@ -396,6 +396,8 @@
           cidade: this.selectCidade.value,
         },
         transacaoEscolhida = container.todosElementosMontados.filter(this.filtrarHtml(valorTransacoes));
+      this.montarHtml(transacaoEscolhida, valorTransacoes);
+
 
       this.btnFiltrar = document.getElementById('mudarInformacoesBtn');
 
@@ -410,16 +412,63 @@
 
         //pega novamente o objetos html filtrados após submeter escolha
         var filtraTransacao = container.todosElementosMontados.filter(self.filtrarHtml(valorInputs));
+        self.montarHtml(filtraTransacao, valorInputs);
       });
+
+
     },
 
     filtrarHtml: function(transacoes) {
       return function(obj) {
         return obj.getAttribute("data-tipo-transacao") === transacoes.tipoTransacao && obj.getAttribute("data-tipo-empresa").indexOf(transacoes.tipoEmpresa) > -1 && obj.getAttribute("data-cidade").indexOf(transacoes.cidade) > -1;
       };
-    }
-    
+    },
+
+    montarHtml: function(elementosFiltrados, valorSelecionado) {
+      container.containerInformacoes.innerHTML = "";
+      var i,
+        elementosFiltradosLength = elementosFiltrados.length,
+        htmlTituloToggle,
+        htmlIconeVer;
+
+
+      if (elementosFiltradosLength > 1) {
+
+        for (i = 0; i < elementosFiltradosLength; i++) {
+
+          //crio um novo título para fazer o toggle do container
+          htmlTituloToggle = document.createElement("p");
+          htmlTituloToggle.className = "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleFechado";
+
+          htmlIconeVer = document.createElement("span");
+          htmlIconeVer.className = "icone icon-plus";
+
+          //pego a tag p que está dentro do html dos elementos filtrados
+          var titulo = elementosFiltrados[i].getElementsByClassName("moduloCards-titulo");
+          //pego o texto da tag p
+          var textoTituloToggle = titulo[0].textContent;
+
+          //escondo o título de dentro do elementos filtrados
+          titulo[0].setAttribute("class", "moduloCards-titulo u-esconder");
+
+          htmlTituloToggle.innerHTML = textoTituloToggle;
+
+          htmlTituloToggle.insertBefore(htmlIconeVer, htmlTituloToggle.childNodes[0]);
+
+          container.containerInformacoes.appendChild(htmlTituloToggle);
+        }
+      } else {
+        for (i = 0; i < elementosFiltradosLength; i++) {
+          container.containerInformacoes.appendChild(elementosFiltrados[i]);
+        }
+      }
+
+    },
+
+
+
   };
+
 
 
   ManipulaDados.init();
