@@ -326,7 +326,7 @@
 
         this.todosElementosMontados.push(this.htmlContainerPassosCard);
       }
-      console.log(this.todosElementosMontados);
+      filtro.init();
     },
 
     montarCard: function(dadosCards) {
@@ -380,9 +380,27 @@
 
   };
 
+  var filtro = {
 
+    init: function() {
 
+      var self = this;
+      
+      this.selectTransacao = document.getElementById('selectTpTransacao');
+      this.selectTipoEmpresa = document.getElementById('selectTpEmpresa');
+      this.selectCidade = document.getElementById('selectMunicipio');
 
+      //valor selects do filtro
+      var valorTransacoes = {
+        tipoTransacao: this.selectTransacao.value,
+        tipoEmpresa: this.selectTipoEmpresa.value,
+        cidade: this.selectCidade.value,
+      };
+
+      this.btnFiltrar = document.getElementById('mudarInformacoesBtn');
+    }
+
+  };
 
   ManipulaDados.init();
 
