@@ -9,6 +9,10 @@ ul, li, p, a, span, div, label, button, .button, nav, h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -260,8 +264,101 @@ button, .button {
   animation: flipOutX .75s;
 }
 
+
 /* Classe utilitária */
 
 .u-esconder {
   display: none;
+}
+
+
+/* Mensagem de Erro */
+
+
+/*==== mensagem de erro superior do plugin do foundation ====*/
+
+.field-validation-error.text-danger {
+  background: #F3D2D4;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: #9a5151;
+  padding: 1em 1em 1em 4.5em;
+  position: relative;
+  margin-bottom: 1.5em;
+  margin-top: .5em;
+  font-style: normal;
+}
+
+.field-validation-error.text-danger:before {
+  content: '\e904';
+  font-family: icomoon !important;
+  font-weight: normal;
+  left: 18px;
+  top: 3px;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  font-size: 2em;
+}
+
+
+/*==== mensagem de erro superior da parte de login ====*/
+
+.alerta>.alertaBox {
+  font-size: 1em;
+  border: none;
+}
+
+.alerta .alertaBox-conteudo {
+  display: inline-block;
+  padding: 0 0.5rem 0 2rem;
+  margin: 0;
+}
+
+.alerta .alertaBox--erro {
+  background: #F3D2D4;
+  color: #9a5151;
+}
+
+.alerta .alertaBox-icone {
+  margin-right: 1em;
+  font-size: 2em;
+  font-size: 1.375rem;
+  padding: 9px 6px 4px;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.6875rem;
+  left: 0.25rem;
+}
+
+.alerta .alertaBox-txt {
+  margin: 0;
+  font-size: 1.233em;
+}
+
+.alerta .u-md-link.alertaBox-lnk, .alerta .u-md-texto.alertaBox-txt {
+  font-size: 1.083em;
+}
+
+.alerta .alertaBox-lnk {
+  display: block;
+  font-size: 1.233em;
+  color: #4261AF;
+}
+
+.alerta .alertaBox-lnk:hover {
+  text-decoration: underline;
+  color: #213361;
+}
+
+.alerta .alertaBox-txt.alertaBox-txtErro {
+  color: #9a5151;
+}
+
+@media only screen and (max-width: 64em) {
+  .alerta>.alertaBox {
+    font-size: 1.083em;
+  }
 }
