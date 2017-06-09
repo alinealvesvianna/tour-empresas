@@ -274,6 +274,7 @@
 
         init: function () {
             this.dadoStorage = JSON.parse(localStorage.getItem("dados"));
+            container.init();
         },
 
         pegarTodosDados: function () {
@@ -281,6 +282,57 @@
         }
 
     };
+
+    var container = {
+
+        init: function () {
+            this.containerInformacoes = document.getElementById('containerInformacoes');
+            this.montarContainer();
+        },
+
+        montarContainer: function () {
+
+            var i,
+                htmlContainerTitulo,
+                todosObjs = ManipulaDados.pegarTodosDados(),
+                todosObjsLength = todosObjs.length;
+
+            this.htmlContainerPassosCard = null;
+
+
+            for (i = 0; i < todosObjsLength; i++) {
+
+                var objeto = todosObjs[i];
+
+                this.htmlContainerPassosCard = document.createElement("section");
+                this.htmlContainerPassosCard.className = "moduloCards";
+
+                //seta atributo de tipo de transação
+                this.htmlContainerPassosCard.setAttribute("data-tipo-transacao", objeto.tipoTransacao);
+
+                //seta atributo de cidade
+                var cidades = objeto.cidade.join(" ");
+                this.htmlContainerPassosCard.setAttribute("data-cidade", cidades);
+
+                //seta atributo de tipo de empresa
+                var tipoEmpresas = objeto.tipoEmpresa.join(" ");
+                this.htmlContainerPassosCard.setAttribute("data-tipo-empresa", tipoEmpresas);
+
+                htmlContainerTitulo = document.createElement("p");
+                htmlContainerTitulo.className = "moduloCards-titulo";
+                htmlContainerTitulo.textContent = objeto.tituloGeral;
+
+                this.htmlContainerPassosCard.appendChild(htmlContainerTitulo);
+            }
+
+            console.log(this.htmlContainerPassosCard);
+
+        },
+
+    };
+
+
+
 
 
     ManipulaDados.init();
