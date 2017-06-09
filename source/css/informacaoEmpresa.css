@@ -9,6 +9,12 @@ ul, li, p, a, span, div, label, button, .button, nav, h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
 }
 
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
 p {
   margin: 0;
 }
@@ -271,9 +277,12 @@ button, .button {
   display: none;
 }
 
-
-/* Mensagem de Erro */
-
+.u-bold {
+    font-weight: bold;
+}
+.u-xsm-margemTop {
+    margin-top: .5em;
+}
 
 /*==== mensagem de erro superior do plugin do foundation ====*/
 
@@ -303,7 +312,11 @@ button, .button {
 }
 
 
-/*==== mensagem de erro superior da parte de login ====*/
+/*==== mensagem de erro ====*/
+
+.alerta {
+  position: relative;
+}
 
 .alerta>.alertaBox {
   font-size: 1em;
@@ -314,6 +327,18 @@ button, .button {
   display: inline-block;
   padding: 0 0.5rem 0 2rem;
   margin: 0;
+}
+
+.alert-box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding: .875rem 1.5rem .875rem .875rem;
+    font-size: .8125rem;
+    transition: opacity 300ms ease-out;
 }
 
 .alerta .alertaBox--erro {
