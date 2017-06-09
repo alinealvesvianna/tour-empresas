@@ -424,83 +424,97 @@
       };
     },
 
-    montarHtml: function (elementosFiltrados, valorSelecionado) {
-        container.containerInformacoes.innerHTML = "";
-        var i,
-            elementosFiltradosLength = elementosFiltrados.length,
-            htmlTituloToggle,
-            htmlIconeVer;
+    montarHtml: function(elementosFiltrados, valorSelecionado) {
+      container.containerInformacoes.innerHTML = "";
+      var i,
+        elementosFiltradosLength = elementosFiltrados.length,
+        htmlTituloToggle,
+        htmlIconeVer;
+
+      if (elementosFiltradosLength === 0) {
+
+        this.montarErro(valorSelecionado);
+      }
 
 
-        if (elementosFiltradosLength > 1) {
+      if (elementosFiltradosLength > 1) {
 
-            for (i = 0; i < elementosFiltradosLength; i++) {
+        for (i = 0; i < elementosFiltradosLength; i++) {
 
-                //crio um novo título para fazer o toggle do container
-                htmlTituloToggle = document.createElement("p");
-                htmlTituloToggle.className = "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleFechado";
+          //crio um novo título para fazer o toggle do container
+          htmlTituloToggle = document.createElement("p");
+          htmlTituloToggle.className = "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleFechado";
 
-                htmlIconeVer = document.createElement("span");
-                htmlIconeVer.className = "icone icon-plus";
+          htmlIconeVer = document.createElement("span");
+          htmlIconeVer.className = "icone icon-plus";
 
-                //pego a tag p que está dentro do html dos elementos filtrados
-                var titulo = elementosFiltrados[i].getElementsByClassName("moduloCards-titulo");
-                //pego o texto da tag p
-                var textoTituloToggle = titulo[0].textContent;
+          //pego a tag p que está dentro do html dos elementos filtrados
+          var titulo = elementosFiltrados[i].getElementsByClassName("moduloCards-titulo");
+          //pego o texto da tag p
+          var textoTituloToggle = titulo[0].textContent;
 
-                //escondo o título de dentro do elementos filtrados
-                titulo[0].setAttribute("class", "moduloCards-titulo u-esconder");
+          //escondo o título de dentro do elementos filtrados
+          titulo[0].setAttribute("class", "moduloCards-titulo u-esconder");
 
-                htmlTituloToggle.innerHTML = textoTituloToggle;
+          htmlTituloToggle.innerHTML = textoTituloToggle;
 
-                htmlTituloToggle.insertBefore(htmlIconeVer, htmlTituloToggle.childNodes[0]);
+          htmlTituloToggle.insertBefore(htmlIconeVer, htmlTituloToggle.childNodes[0]);
 
-                container.containerInformacoes.appendChild(htmlTituloToggle);
+          container.containerInformacoes.appendChild(htmlTituloToggle);
 
-                htmlTituloToggle.addEventListener('click', (function (elementosFiltradosCopy) {
+          htmlTituloToggle.addEventListener('click', (function(elementosFiltradosCopy) {
 
-                    return function () {
+            return function() {
 
-                        var icone = this.getElementsByClassName("icone");
+              var icone = this.getElementsByClassName("icone");
 
-                        if (container.containerInformacoes.contains(elementosFiltradosCopy)) {
+              if (container.containerInformacoes.contains(elementosFiltradosCopy)) {
 
-                            container.containerInformacoes.removeChild(elementosFiltradosCopy);
+                container.containerInformacoes.removeChild(elementosFiltradosCopy);
 
-                            container.containerInformacoes.insertBefore(this, container.containerInformacoes.childNodes[0]);
+                container.containerInformacoes.insertBefore(this, container.containerInformacoes.childNodes[0]);
 
-                            this.setAttribute("class", "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleFechado");
+                this.setAttribute("class", "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleFechado");
 
-                            icone[0].setAttribute("class", "icone icon-plus");
+                icone[0].setAttribute("class", "icone icon-plus");
 
-                        } else {
+              } else {
 
-                            container.containerInformacoes.insertBefore(elementosFiltradosCopy, container.containerInformacoes.childNodes[0]);
+                container.containerInformacoes.insertBefore(elementosFiltradosCopy, container.containerInformacoes.childNodes[0]);
 
-                            elementosFiltradosCopy.insertBefore(this, elementosFiltradosCopy.childNodes[0]);
+                elementosFiltradosCopy.insertBefore(this, elementosFiltradosCopy.childNodes[0]);
 
-                            this.setAttribute("class", "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleAberto");
+                this.setAttribute("class", "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleAberto");
 
-                            icone[0].setAttribute("class", "icone icon-cancel");
-                        }
-                    };
-                })(elementosFiltrados[i]));
-            }
+                icone[0].setAttribute("class", "icone icon-cancel");
+              }
+            };
+          })(elementosFiltrados[i]));
         }
-
-        else {
-            for (i = 0; i < elementosFiltradosLength; i++) {
-                container.containerInformacoes.appendChild(elementosFiltrados[i]);
-            }
+      } else {
+        for (i = 0; i < elementosFiltradosLength; i++) {
+          container.containerInformacoes.appendChild(elementosFiltrados[i]);
         }
+      }
 
     },
 
+    montarErro: function(opcoesSelecionadas) {
 
+      container.containerInformacoes.insertAdjacentHTML('beforeend', container.htmlContainerErro);
+
+      var tpTransacao = document.getElementById('tipoTransacao');
+      var tpEmpresa = document.getElementById('tipEmpresa');
+      var tpCidade = document.getElementById('tipoMunicipio');
+
+      var cidadeString = opcoesSelecionadas.cidade === "outrosMunicipios" ? "Outros Municípios" : "Rio de Janeiro";
+
+      tpTransacao.innerHTML = "<strong>Tipo de Transação: </strong>" + opcoesSelecionadas.tipoTransacao;
+      tpEmpresa.innerHTML = "<strong>Tipo Empresa: </strong>" + opcoesSelecionadas.tipoEmpresa;
+      tpCidade.innerHTML = "<strong>Cidade: </strong>" + cidadeString;
+    }
 
   };
-
-
 
   ManipulaDados.init();
 
