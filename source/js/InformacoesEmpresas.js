@@ -361,8 +361,26 @@
 
                 var txtCard = dadosCards[i].textoCard;
 
+                this.montarTextoCard(txtCard);
+
             }
-        }
+        },
+
+        montarTextoCard: function (textos) {
+
+            var i,
+                htmlTextoCard,
+                todosTextosLength = textos.length;
+
+            for (i = 0; todosTextosLength > i; i++) {
+                htmlTextoCard = '<p class="infoContainer-txt">' + textos[i] + '</p>';
+
+                //função usada para inserir string como nó do DOM
+                //https://developer.mozilla.org/pt-BR/docs/Web/API/Element/insertAdjacentHTML
+                this.htmlArticleCard.insertAdjacentHTML('beforeend', htmlTextoCard);
+            }
+
+        },
 
     };
 
