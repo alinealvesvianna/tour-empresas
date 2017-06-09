@@ -383,24 +383,44 @@
   var filtro = {
 
     init: function() {
-
       var self = this;
-      
+
       this.selectTransacao = document.getElementById('selectTpTransacao');
       this.selectTipoEmpresa = document.getElementById('selectTpEmpresa');
       this.selectCidade = document.getElementById('selectMunicipio');
 
       //valor selects do filtro
       var valorTransacoes = {
-        tipoTransacao: this.selectTransacao.value,
-        tipoEmpresa: this.selectTipoEmpresa.value,
-        cidade: this.selectCidade.value,
-      };
+          tipoTransacao: this.selectTransacao.value,
+          tipoEmpresa: this.selectTipoEmpresa.value,
+          cidade: this.selectCidade.value,
+        },
+        transacaoEscolhida = container.todosElementosMontados.filter(this.filtrarHtml(valorTransacoes));
 
       this.btnFiltrar = document.getElementById('mudarInformacoesBtn');
-    }
 
+      this.btnFiltrar.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var valorInputs = {
+          tipoTransacao: self.selectTransacao.value,
+          tipoEmpresa: self.selectTipoEmpresa.value,
+          cidade: self.selectCidade.value,
+        };
+
+        //pega novamente o objetos html filtrados após submeter escolha
+        var filtraTransacao = container.todosElementosMontados.filter(self.filtrarHtml(valorInputs));
+      });
+    },
+
+    filtrarHtml: function(transacoes) {
+      return function(obj) {
+        return obj.getAttribute("data-tipo-transacao") === transacoes.tipoTransacao && obj.getAttribute("data-tipo-empresa").indexOf(transacoes.tipoEmpresa) > -1 && obj.getAttribute("data-cidade").indexOf(transacoes.cidade) > -1;
+      };
+    }
+    
   };
+
 
   ManipulaDados.init();
 
