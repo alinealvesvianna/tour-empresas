@@ -16,58 +16,58 @@
 <body>
     <div class="container-site">
 
-        <div class="ats-container--paginaInterna">
-            <section class="ats-header-banner">
+        <div class="container--paginaInterna">
+            <section class="header-banner">
                 <div class="row">
                     <div class="columns small-12 medium-4">
-                        <div class="ats-containerIlus">
-                            <div class="ats-ilustracao"></div>
+                        <div class="containerIlus">
+                            <div class="ilustracao"></div>
                         </div>
                     </div>
-                    <div class="columns small-12 medium-8 ats-header-bannerContent">
-                        <h1 class="ats-header-bannerTit">Você escolheu ver informações sobre:</h1>
-                        <form action="#" class="ats-header-bannerForm">
+                    <div class="columns small-12 medium-8 header-bannerContent">
+                        <h1 class="header-bannerTit">Você escolheu ver informações sobre:</h1>
+                        <form action="#" class="header-bannerForm">
                             <div class="row">
                                 <div class="columns small-12 medium-3">
-                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Tipo de Transação</label>
-                                    <select name="tipo-transacao" id="selectTpTransacao" class="ats-header-bannerSelect">
+                                    <label class="header-bannerLbl" for="tpTransEmp">Tipo de Transação</label>
+                                    <select name="tipo-transacao" id="selectTpTransacao" class="header-bannerSelect">
                                   <option value="abertura">Abertura</option>
                                   <option value="baixa">Baixa</option>
                                   <option value="alteracao">Alteração</option>
                               </select>
                                 </div>
                                 <div class="columns small-12 medium-3">
-                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Tipo de Empresa</label>
-                                    <select name="tipo-empresa" id="selectTpEmpresa" class="ats-header-bannerSelect">
+                                    <label class="header-bannerLbl" for="tpTransEmp">Tipo de Empresa</label>
+                                    <select name="tipo-empresa" id="selectTpEmpresa" class="header-bannerSelect">
                                   <option value="matriz">Matriz</option>
                                   <option value="filial">Filial</option>
                                   <option value="mei">Mei</option>
                               </select>
                                 </div>
                                 <div class="columns small-12 medium-4">
-                                    <label class="ats-header-bannerLbl" for="tpTransEmp">Município</label>
-                                    <select name="tipo-municipio" id="selectMunicipio" class="ats-header-bannerSelect">
+                                    <label class="header-bannerLbl" for="tpTransEmp">Município</label>
+                                    <select name="tipo-municipio" id="selectMunicipio" class="header-bannerSelect">
                                   <option value="rioDeJaneiro">Rio de Janeiro</option>
                                   <option value="outrosMunicipios">Outros Municípios</option>
                               </select>
                                 </div>
                                 <div class="columns small-12 medium-2">
-                                    <button type="submit" class="ats-botao--azul u-md-txtBtn ats-btn ats-btn--tamanhoCampo" id="mudarInformacoesBtn">Mudar</button>
+                                    <button type="submit" class="botao--azul u-md-txtBtn btn btn--tamanhoCampo" id="mudarInformacoesBtn">Mudar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </section>
-            <section id="containerInformacoesCards" class="ats-infoContainer">
+            <section id="containerInformacoesCards" class="infoContainer">
                 <div class="row">
                     <div class="columns small-12" id="containerInformacoes">
                         <script type="text/template" id="erro">
-                            <section class="ats-alerta" id="containerErro">
-                                <div class="ats-alertaBox--erro ats-alertaBox alert-box">
-                                    <span class="ats-alertaBox-icone ats-alertaBox-icone--erro icon-blocked"></span>
-                                    <section class="ats-alertaBox-conteudo">
-                                        <p class="ats-alertaBox-txt ats-alertaBox-txtErro u-bold">Não foram encontradas informações sobre as seguintes opções:</p>
+                            <section class="alerta" id="containerErro">
+                                <div class="alertaBox--erro alertaBox alert-box">
+                                    <span class="alertaBox-icone alertaBox-icone--erro icon-blocked"></span>
+                                    <section class="alertaBox-conteudo">
+                                        <p class="alertaBox-txt alertaBox-txtErro u-bold">Não foram encontradas informações sobre as seguintes opções:</p>
                                         <ul class="u-xsm-margemTop">
                                             <li id="tipoTransacao" class="u-md-texto"></li>
                                             <li id="tipEmpresa" class="u-md-texto"></li>

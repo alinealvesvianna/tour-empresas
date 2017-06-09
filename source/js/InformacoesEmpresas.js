@@ -1,6 +1,6 @@
 (function () {
 
-    var items = localStorage.getItem("dados")
+    var items = localStorage.getItem("dados");
 
     if (items === null || items.length === 0 || items === undefined) {
 
@@ -263,9 +263,26 @@
                    ]
                }
             ]
-        }
+        };
 
         localStorage.setItem("dados", JSON.stringify(Dados));
+
+    }
+
+
+    var ManipulaDados = {
+
+        init: function () {
+            this.dadoStorage = JSON.parse(localStorage.getItem("dados"));
+        },
+
+        pegarTodosDados: function () {
+            return this.dadoStorage.dadosConteudo;
+        }
+
     };
+
+
+    ManipulaDados.init();
 
 })();
