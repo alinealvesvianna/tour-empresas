@@ -461,16 +461,27 @@
           htmlTituloToggle.insertBefore(htmlIconeVer, htmlTituloToggle.childNodes[0]);
 
           container.containerInformacoes.appendChild(htmlTituloToggle);
+          //tirando função de dentro de loop
+          //https://stackoverflow.com/questions/3927054/jslint-error-dont-make-functions-within-a-loop-leads-to-question-about-javas
+          htmlTituloToggle.addEventListener('click', this.montarClique(elementosFiltrados[i]));
+        }
+      } else {
+        for (i = 0; i < elementosFiltradosLength; i++) {
+          container.containerInformacoes.appendChild(elementosFiltrados[i]);
+        }
+      }
 
-          htmlTituloToggle.addEventListener('click', (function(elementosFiltradosCopy) {
+    },
 
-            return function() {
+    montarClique: function (copiaElementosFiltrados) {
 
-              var icone = this.getElementsByClassName("icone");
+        return function () {
 
-              if (container.containerInformacoes.contains(elementosFiltradosCopy)) {
+            var icone = this.getElementsByClassName("icone");
 
-                container.containerInformacoes.removeChild(elementosFiltradosCopy);
+            if (container.containerInformacoes.contains(copiaElementosFiltrados)) {
+
+                container.containerInformacoes.removeChild(copiaElementosFiltrados);
 
                 container.containerInformacoes.insertBefore(this, container.containerInformacoes.childNodes[0]);
 
@@ -478,24 +489,17 @@
 
                 icone[0].setAttribute("class", "icone icon-plus");
 
-              } else {
+            } else {
 
-                container.containerInformacoes.insertBefore(elementosFiltradosCopy, container.containerInformacoes.childNodes[0]);
+                container.containerInformacoes.insertBefore(copiaElementosFiltrados, container.containerInformacoes.childNodes[0]);
 
-                elementosFiltradosCopy.insertBefore(this, elementosFiltradosCopy.childNodes[0]);
+                copiaElementosFiltrados.insertBefore(this, copiaElementosFiltrados.childNodes[0]);
 
                 this.setAttribute("class", "moduloCards-titulo moduloCards-titulo--mostrarTitulo moduloCards-titulo--toggle moduloCards-titulo--toggleAberto");
 
                 icone[0].setAttribute("class", "icone icon-cancel");
-              }
-            };
-          })(elementosFiltrados[i]));
-        }
-      } else {
-        for (i = 0; i < elementosFiltradosLength; i++) {
-          container.containerInformacoes.appendChild(elementosFiltrados[i]);
-        }
-      }
+            }
+        }; (copiaElementosFiltrados);
 
     },
 
