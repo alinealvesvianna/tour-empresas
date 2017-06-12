@@ -499,7 +499,7 @@
 
                 icone[0].setAttribute("class", "icone icon-cancel");
             }
-        }; (copiaElementosFiltrados);
+        };
 
     },
 
