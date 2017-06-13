@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Banner Tour</title>
+</head>
+
+<body>
+  <div class="bannerCapa" id="bannerCapa">
+    <picture class="bannerImagem">
+      <source srcset="~/Content/Images/bg_riodejaneiro_mobile.jpg" media="(max-width: 40.063em)">
+      <source srcset="~/Content/Images/bg_riodejaneiro.jpg" media="(min-width: 40.063em)">
+      <img class="bannerImagem" src="~/Content/Images/bg_riodejaneiro.jpg" alt="Imagem do Pão de Açúcar">
+    </picture>
+    <div class="row">
+      <div class="columns small-12">
+        <h3 class="banner-header banner-header--capa">Seja Bem-Vindo!</h3>
+        <h4 class="banner-subtitulo">Encontre todas as informações para abertura, alteração e baixa de sua empresa.</h4>
+        <button id="iniciarTour" class="banner-btn">Iniciar</button>
+      </div>
+    </div>
+  </div>
+  <section id="bannerContainerPrincipal">
+    <script type="text/template" id="containerBanner">
+      <img class="bannerFundo" src="Content/Images/fundoBanner.png" alt="Grafismo para banner">
+      <div class="bannerBox">
+        <div class="containerIlustracao">
+          <svg version="1.1" id="svgIlustracaoBanner" viewBox="0 0 433.5 287.3" preserveAspectRatio="xMinYMin meet" class="containerIlustracao-ilustracao">
+                  </svg>
+        </div>
+        <div class="banner-container">
+          <section class="banner-passo--primeiroPasso banner-passo">
+            <h3 class="banner-header">Descubra como:  </h3>
+          </section>
+        </div>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="containerPassosEscolha">
+      <section class="banner-passo--segundoPasso banner-passo">
+        <div class="banner-secao banner-secao--transacao">
+          <a id="fecharBtn" class="banner-fechar" href="#">
+                      <span class="icon-cross"></span>
+                  </a>
+          <div class="banner-contentTransacao">
+            <div id="passoTipoEmpresa" class="banner-tipoEmpresa">
+              <h3 id="tituloTpTransacao" class="banner-header banner-header--funcoes banner-header--transacao"></h3>
+              <p class="banner-descricao"></p>
+              <div class="banner-containerForm">
+                <form class="banner-form" action="#" method="get"></form>
+              </div>
+            </div>
+          </div>
+          <aside class="banner-menuOpc">
+            <nav class="banner-navegacao">
+              <ul class="banner-lista">
+                <li class="banner-item">
+                  <a id="navTpEmpresaBtn" class="banner-btn banner-lnk" href="#">
+                                      <span class="icon-industry banner-icone"></span>
+                                      Tipo Empresa
+                                  </a>
+                </li>
+                <li class="banner-item">
+                  <a id="navMunicipioBtn" class="banner-btn banner-lnk banner-lnk--desativado" href="#">
+                                      <span class="icon-empresa banner-icone"></span>
+                                      Município
+                                  </a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      </section>
+    </script>
+
+
+    <script type="text/template" id="opcaoFormBanner">
+      <div class="banner-opcForm">
+        <input name="tipo-empresa" id="" type="radio" class="icheckBtn banner-input banner-input--tpEmp" value="" />
+        <label for="" class="banner-label"></label>
+      </div>
+    </script>
+
+
+    <script type="text/template" id="btnFormBanner">
+      <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+    </script>
+
+  </section>
+</body>
+
+</html>
