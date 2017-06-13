@@ -1,0 +1,523 @@
+.bannerCapa {
+    position: relative;
+}
+
+.bannerImagem {
+    position: absolute;
+    object-fit: cover;
+    font-family: "object-fit: cover; object-position: top;";
+    width: 100%;
+    height: 400px;
+    top: 0;
+}
+
+.bannerCapa .banner-btn {
+    display: block;
+    padding: 1em 3em;
+    margin-top: 2em;
+    background: #4354a6;
+    border-radius: 2em;
+}
+
+.banner-subtitulo {
+    font-size: 1.8em;
+    font-weight: 600;
+    background-color: rgba(202, 246, 255, 0.5);
+}
+
+/*== banner da home com o tour ==*/
+.banner {
+    background: rgba(196,196,196,1);
+    background: -moz-linear-gradient(left, rgba(196,196,196,1) 0%, rgba(215,215,215,1) 10%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(196,196,196,1)), color-stop(10%, rgba(215,215,215,1)), color-stop(55%, rgba(255,255,255,1)), color-stop(91%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(196,196,196,1) 0%, rgba(215,215,215,1) 10%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(196,196,196,1) 0%, rgba(215,215,215,1) 10%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(196,196,196,1) 0%, rgba(215,215,215,1) 10%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(196,196,196,1) 0%, rgba(215,215,215,1) 10%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 91%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4c4c4', endColorstr='#ffffff', GradientType=1 );
+    /*background-image: url("../Images/fundoBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    margin: 0;
+    padding-bottom: 1em;
+    position: relative;
+}
+
+.bannerFundo {
+    position: absolute;
+    object-fit: cover;
+    font-family: "object-fit: cover; object-position: top;";
+    width:100%;
+    height: 100%;
+}
+
+.banner .bannerBox {
+    max-width: 90rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner .containerIlustracao {
+    /*dá ruim position relative com display footer-table no firefox*/
+    max-width: 320px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+    .banner .containerIlustracao .containerIlustracao-ilustracao {
+        height: 100%;
+        object-fit: cover;
+        width: auto !important;
+        display: block;
+        -ms-interpolation-mode: bicubic;
+    }
+
+.banner-header {
+    margin: 0;
+    font-size: 3em;
+    padding: .5em 0;
+    color: #4354a6;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.banner-header--capa {
+    margin-top: 1em;
+    font-size: 3.5em;
+    font-weight: 500;
+}
+
+.banner .banner-header.banner-header--transacao {
+    background: #4354a6;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.banner .banner-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+    .banner .banner-container:before,
+    .banner .banner-container:after {
+        content: "";
+        display: table;
+    }
+
+
+    .banner .banner-container:after {
+        clear: both;
+    }
+
+.banner .banner-passo {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    box-sizing: border-box;
+}
+
+.banner .banner-header.banner-header--funcoes {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner .banner-header.banner-header--transacao {
+    font-size: 1.8em;
+    padding-left: 1em;
+}
+
+.banner .banner-secao {
+    border: 1px solid #4354a6;
+    padding: 1em;
+    margin: 0 auto 1em auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+    .banner .banner-secao.banner-secao--transacao {
+        padding: 0;
+        width: 100%;
+    }
+
+.banner .banner-descricao {
+    font-size: 1.3em;
+    text-align: center;
+    color: #4354a6;
+    font-weight: normal;
+    margin-bottom: .5em;
+}
+
+.banner .banner-btn {
+    background: #4354a6;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    padding: 1em;
+    width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    .banner .banner-btn.banner-btn--selecionado {
+        background: #0F8C07;
+    }
+
+.banner .banner-fechar {
+    position: absolute;
+    left: 1em;
+    top: .8em;
+    display: block;
+}
+
+    .banner .banner-fechar .icon-cross:before {
+        content: "\e906";
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        font-size: 3em;
+        color: #fff;
+    }
+
+.banner .banner-containerForm {
+    margin: 2em 0;
+}
+
+.banner-containerForm .banner-form .banner-opcForm {
+    width: 60%;
+    margin: 0 auto 1em auto;
+    display: block;
+}
+
+.banner-form .banner-opcForm .iradio_line-blue {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #4354A6;
+}
+
+    .banner-form .banner-opcForm .iradio_line-blue.checked {
+        background: #2F375D;
+    }
+
+.banner-menuOpc .banner-navegacao .banner-lista,
+.banner-menuOpc .banner-navegacao {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    width: 100%;
+}
+
+.banner-navegacao .banner-lista .banner-lnk {
+    background: #4354a6;
+    text-align: center;
+    border-right: 1px solid #2D386B;
+}
+
+.banner-lista .banner-item .banner-lnk {
+    width: 100%;
+}
+
+.banner-lista .banner-item {
+    width: 100%;
+}
+
+.banner-item .banner-lnk .banner-icone {
+    padding-right: .5em;
+}
+
+.banner-lnk.banner-lnk--escolhido .banner-icone[class^="icon-"]:before {
+    content: "\e92c";
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+.banner-navegacao .banner-lista .banner-lnk:last-of-type {
+    border-right: none;
+}
+
+
+.banner-lista .banner-lnk.banner-lnk--desativado {
+    color: #949191;
+    background: #ccc;
+    pointer-events: none;
+}
+
+.banner-lista .banner-lnk.banner-lnk--escolhido {
+    color: #fff;
+    background: #6882BF;
+}
+
+.banner br {
+    display: none;
+}
+
+@media only screen and (min-width: 40.063em) {
+
+    /*.bannerCapa {
+        background-image: url("../Images/bg_riodejaneiro.jpg");
+    }*/
+
+    .banner-subtitulo {
+        width: 50%;
+        background-color: rgba(202, 246, 255, 0);
+    }
+}
+
+/*== breakpoint desktop ==*/
+@media only screen and (min-width: 60em) {
+
+    .banner br {
+        display: block;
+    }
+
+    .banner .banner-header {
+        margin-left: 5%;
+    }
+
+    .banner .containerIlustracao {
+        /*display: table-footer-group;*/
+        max-width: 100%;
+        position: static;
+    }
+
+        .banner .containerIlustracao .containerIlustracao-ilustracao {
+            top: .5em;
+            left: 1em;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+    .banner .banner-btn {
+        padding: .5em;
+        width: 100%;
+        margin: 2em auto 1em auto;
+    }
+
+        .banner .banner-btn.banner-btn--sm {
+            width: 50%;
+            padding: 1em .5em;
+        }
+
+    .banner-passo--primeiroPasso  {
+        width: 60%;
+        float: right;
+        text-align: right;
+    }
+
+        .banner-passo--primeiroPasso.banner-passo1--selecionado {
+            width: 40%;
+        }
+
+    .banner .banner-secao {
+        width: calc(30.5% - 1.5%);
+        display: inline-block;
+        margin: 0 1.5% 0 0;
+        min-height: 22.5em;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+        .banner .banner-secao:last-of-type {
+            margin: 0;
+            width: 30.5%;
+        }
+
+    .banner-passo--primeiroPasso.banner-passo1--selecionado .banner-secao {
+        width: 48%;
+    }
+
+    .banner .banner-passo--segundoPasso {
+        width: 60%;
+        padding-right: 0;
+        margin-top: 7.25em;
+    }
+
+    .banner .banner-secao.banner-secao--transacao {
+        width: 100%;
+    }
+
+        .banner .banner-secao.banner-secao--transacao:after,
+        .banner .banner-secao.banner-secao--transacao:before {
+            content: "";
+            display: table;
+        }
+
+        .banner .banner-secao.banner-secao--transacao:after {
+            content: "";
+            clear: both;
+        }
+
+    .banner .banner-header.banner-header--transacao {
+        background: none;
+        color: #4354a6;
+    }
+
+    .banner .banner-fechar {
+        left: auto;
+        right: 1em;
+    }
+
+        .banner .banner-fechar .icon-cross:before {
+            content: "\e918";
+            color: #4354a6;
+        }
+
+    .banner-secao.banner-secao--transacao .banner-contentTransacao {
+        width: 70%;
+        float: right;
+    }
+
+    .banner .banner-header.banner-header--transacao {
+        font-size: 2em;
+        padding-left: 0;
+    }
+
+    .banner-containerForm .banner-form {
+        margin-top: 2em;
+    }
+
+        .banner-containerForm .banner-form .banner-opcForm {
+            width: 25%;
+            margin: 0 1em 0 0;
+            display: inline-block;
+        }
+
+            .banner-containerForm .banner-form .banner-opcForm.banner-opcForm--lg {
+                width: 40%;
+            }
+
+
+            .banner-containerForm .banner-form .banner-opcForm:last-of-type {
+                margin: 0 1em 0 0;
+            }
+
+
+    .banner-secao.banner-secao--transacao .banner-menuOpc {
+        width: 30%;
+        margin-top: 10%;
+    }
+
+    .banner-menuOpc .banner-navegacao .banner-lista,
+    .banner-menuOpc .banner-navegacao {
+        display: block;
+        width: 100%;
+    }
+
+    .banner-navegacao .banner-lista .banner-item {
+        width: 100%;
+        margin-bottom: 1em;
+        border-right: none;
+        position: relative;
+    }
+
+    .banner-lista .banner-item .banner-lnk {
+        padding: 1em;
+    }
+
+    .banner-navegacao .banner-lista .banner-lnk:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -1.45em;
+        top: 0;
+        border-style: solid;
+        border-color: transparent transparent transparent #4354a6;
+        border-width: 1.85em 0 1.8em 1.5em;
+    }
+
+    .banner-lista .banner-lnk.banner-lnk--desativado:after,
+    .banner-lista .banner-lnk.banner-lnk--escolhido:after {
+        border-width: 0;
+    }
+
+    .banner-navegacao .banner-lista .banner-item:last-of-type {
+        margin-bottom: 0;
+    }
+
+
+    .banner .banner-containerForm {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/*== Breakpoint x-Large Desktop ==*/
+@media only screen and (min-width: 90.063em) {
+    .bannerCapa,
+    .bannerImagem {
+        height: 500px;
+    }
+
+    .banner br {
+        display: none;
+    }
+
+    .banner {
+        padding-bottom: 3em;
+    }
+
+        .banner .banner-secao {
+            min-height: 25em;
+            padding: 3em 1em;
+        }
+
+        .banner .banner-btn {
+            padding: 1em;
+            width: 80%;
+        }
+
+        .banner .banner-descricao {
+            margin: 1.5em auto 1.5em auto;
+        }
+
+    .banner-navegacao .banner-lista .banner-item:after {
+        right: -1.4em;
+    }
+}
+
+
+/*== Animação ==*/
+#ilustracao .folha-arvore {
+    fill: #109A22;
+    -moz-animation: folhaMovendo 2s infinite alternate;
+    -ms-animation: folhaMovendo 2s infinite alternate;
+    -o-animation: folhaMovendo 2s infinite alternate;
+    -webkit-animation: folhaMovendo 2s infinite alternate;
+    animation: folhaMovendo 2s infinite alternate;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+#ilustracao .folha-arvoreDireita {
+    fill: #109A22;
+    -moz-animation: folhaMovendo2 2s infinite alternate;
+    -ms-animation: folhaMovendo2 2s infinite alternate;
+    -o-animation: folhaMovendo2 2s infinite alternate;
+    -webkit-animation: folhaMovendo2 2s infinite alternate;
+    animation: folhaMovendo2 2s infinite alternate;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    will-change: transform;
+    transform: translateZ(0);
+}
