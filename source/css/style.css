@@ -10,9 +10,9 @@ ul, li, p, a, span, div, label, button, .button, nav, h1, h2, h3, h4, h5, h6 {
 }
 
 ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 p {
@@ -89,8 +89,13 @@ button, .button {
 }
 
 .u-bold {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 .u-xsm-margemTop {
-    margin-top: .5em;
+  margin-top: .5em;
+}
+
+.columns {
+  position: relative;
 }
