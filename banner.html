@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
   <div class="container-site">
     <div class="bannerCapa" id="bannerCapa">
       <picture class="bannerImagem">
@@ -33,12 +32,13 @@
       </div>
     </div>
     <section id="bannerContainerPrincipal">
+
       <script type="text/template" id="containerBanner">
-        <img class="bannerFundo" src="source/images/fundoBanner.png" alt="Grafismo para banner">
+        <img class="bannerFundo" src="Content/Images/fundoBanner.png" alt="Grafismo para banner">
         <div class="bannerBox">
           <div class="containerIlustracao">
             <svg version="1.1" id="svgIlustracaoBanner" viewBox="0 0 433.5 287.3" preserveAspectRatio="xMinYMin meet" class="containerIlustracao-ilustracao">
-                  </svg>
+                </svg>
           </div>
           <div class="banner-container">
             <section class="banner-passo--primeiroPasso banner-passo">
@@ -49,57 +49,49 @@
       </script>
 
 
-      <script type="text/template" id="containerPassosEscolha">
-        <section class="banner-passo--segundoPasso banner-passo">
-          <div class="banner-secao banner-secao--transacao">
-            <a id="fecharBtn" class="banner-fechar" href="#">
-                      <span class="icon-cross"></span>
-                  </a>
-            <div class="banner-contentTransacao">
-              <div id="passoTipoEmpresa" class="banner-tipoEmpresa">
-                <h3 id="tituloTpTransacao" class="banner-header banner-header--funcoes banner-header--transacao"></h3>
-                <p class="banner-descricao"></p>
-                <div class="banner-containerForm">
-                  <form class="banner-form" action="#" method="get"></form>
-                </div>
-              </div>
-            </div>
-            <aside class="banner-menuOpc">
-              <nav class="banner-navegacao">
-                <ul class="banner-lista">
-                  <li class="banner-item">
-                    <a id="navTpEmpresaBtn" class="banner-btn banner-lnk" href="#">
-                                      <span class="icon-industry banner-icone"></span>
-                                      Tipo Empresa
-                                  </a>
-                  </li>
-                  <li class="banner-item">
-                    <a id="navMunicipioBtn" class="banner-btn banner-lnk banner-lnk--desativado" href="#">
-                                      <span class="icon-empresa banner-icone"></span>
-                                      Município
-                                  </a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
-          </div>
-        </section>
-      </script>
 
-
-      <script type="text/template" id="opcaoFormBanner">
+      <script type="text/template" id="opcaoEscolhaBanner">
         <div class="banner-opcForm">
           <input name="tipo-empresa" id="" type="radio" class="icheckBtn banner-input banner-input--tpEmp" value="" />
           <label for="" class="banner-label"></label>
         </div>
       </script>
 
-
-      <script type="text/template" id="btnFormBanner">
-        <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+      <script type="text/template" id="btnFecharBanner">
+        <a id="fecharBtn" class="banner-fechar" href="#">
+            <span class="icon-cross"></span>
+        </a>
       </script>
 
+      <script type="text/template" id="navegacaoBanner">
+        <aside class="banner-menuOpc">
+          <nav class="banner-navegacao">
+            <ul class="banner-lista">
+              <li class="banner-item">
+                <a id="navTpEmpresaBtn" class="banner-btn banner-lnk" href="#">
+                    <span class="icon-industry banner-icone"></span>
+                    Tipo Empresa
+                </a>
+              </li>
+              <li class="banner-item">
+                <a id="navMunicipioBtn" class="banner-btn banner-lnk banner-lnk--desativado" href="#">
+                    <span class="icon-empresa banner-icone"></span>
+                    Município
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      </script>
+
+
+      <!-- <script type="text/template" id="btnFormBanner">
+            <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+        </script> -->
+
     </section>
+
+
   </div>
   <script src="source/js/snap.svg-min.js"></script>
   <script src="source/js/banner.js"></script>
