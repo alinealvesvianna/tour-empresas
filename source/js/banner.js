@@ -48,22 +48,23 @@
 
   var BannerPrincipal = {
 
-    init: function() {
+    init: function () {
 
-      var self = this;
+        var self = this;
 
-      this.containerBanner = document.getElementById('bannerContainerPrincipal');
-      this.estruturaBanner = document.getElementById('containerBanner').innerHTML;
-      this.estruturaBannerEscolha = document.getElementById('containerPassosEscolha').innerHTML;
-      this.estruturaOpcaoFormulario = document.getElementById('opcaoFormBanner').innerHTML;
+        this.urlSvg = "source/images/ilustracao-banner.svg";
+        this.containerBanner = document.getElementById('bannerContainerPrincipal');
+        this.estruturaBanner = document.getElementById('containerBanner').innerHTML;
 
-      this.containerBanner.innerHTML = "";
-      this.btnIniciarTour = document.getElementById('iniciarTour');
-      this.btnIniciarTour.addEventListener('click', function() {
-        self.montarBanner();
-      });
+        this.navegacaoBanner = document.getElementById('navegacaoBanner').innerHTML;
+        this.btnFecharBanner = document.getElementById('btnFecharBanner').innerHTML;
+        this.estruturaOpcaoFormulario = document.getElementById('opcaoEscolhaBanner').innerHTML;
 
-
+        this.containerBanner.innerHTML = "";
+        this.btnIniciarTour = document.getElementById('iniciarTour');
+        this.btnIniciarTour.addEventListener('click', function () {
+            self.montarBanner();
+        });
     },
 
     montarBanner: function() {
@@ -115,9 +116,45 @@
 
       }
 
-      // this.fazerAnimacao();
+      this.fazerAnimacao();
     },
 
+    fazerAnimacao: function () {
+
+        var svgElemento = document.getElementById('svgIlustracaoBanner'),
+            s = Snap(svgElemento),
+            ilustracao,
+            shadow = s.filter(Snap.filter.shadow(2, 2, 3, 'grey', 0.5)),
+            mascara = s.rect(-500, 0, 500, 400);
+
+        Snap.load(this.urlSvg, function (f) {
+            var svg = f.selectAll("g");
+            s.append(svg);
+            ilustracao = s.select("g#ilustracao");
+            // Propriedades
+            mascara.attr({
+                fill: "#fff",
+            });
+
+            ilustracao.attr({
+                fill: "#009BBF",
+                "fill-opacity": 0.3,
+                filter: shadow,
+                mask: mascara,
+            });
+
+            //Animação
+            mascara.animate({
+                x: 0,
+                y: 0
+            }, 1000, mina.easein);
+
+            ilustracao.animate({
+                fill: "#4354a6",
+                "fill-opacity": 0.7,
+            }, 1000, mina.easeout);
+        });
+    },
 
 
 
