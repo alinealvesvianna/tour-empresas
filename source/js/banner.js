@@ -34,8 +34,6 @@
 
   };
 
-
-
   var ManipularConfiguracoes = {
     init: function() {
       BannerPrincipal.init();
@@ -50,13 +48,9 @@
     }
   };
 
-
   var BannerPrincipal = {
 
-
-
     init: function() {
-
       var self = this;
       this.urlSvg = "source/images/ilustracao-banner.svg";
       this.containerBanner = document.getElementById('bannerContainerPrincipal');
@@ -98,7 +92,6 @@
         this.htmlBoxBanner = document.createElement("div");
         this.htmlBoxBanner.className = "banner-secao";
         this.htmlBoxBanner.id = dadosBoxes[i].tipoTransacao;
-
 
         htmlTituloBox = document.createElement("h4");
         htmlTituloBox.className = "banner-header banner-header--funcoes";
@@ -159,10 +152,6 @@
       };
     },
 
-
-
-
-
     fazerAnimacao: function() {
 
       var svgElemento = document.getElementById('svgIlustracaoBanner'),
@@ -199,10 +188,6 @@
         }, 1000, mina.easeout);
       });
     },
-
-
-
-
   }
 
   ManipularConfiguracoes.init();
