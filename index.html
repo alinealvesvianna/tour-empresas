@@ -2,90 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Informação Empresas</title>
-    <link rel="stylesheet" href="source/css/foundation.css">
-    <link rel="stylesheet" href="source/css/informacaoEmpresa.css">
-    <link rel="stylesheet" href="source/css/style.css">
-    <link rel="stylesheet" href="source/css/icomoon.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Banner Tour</title>
+
+  <link rel="stylesheet" href="source/css/foundation.css">
+  <link rel="stylesheet" href="source/css/banner.css">
+  <link rel="stylesheet" href="source/css/style.css">
+  <link rel="stylesheet" href="source/css/icomoon.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="container-site">
-
-        <div class="container--paginaInterna">
-            <section class="header-banner">
-                <div class="row">
-                    <div class="columns small-12 medium-4">
-                        <div class="containerIlus">
-                            <div class="ilustracao"></div>
-                        </div>
-                    </div>
-                    <div class="columns small-12 medium-8 header-bannerContent">
-                        <h1 class="header-bannerTit">Você escolheu ver informações sobre:</h1>
-                        <form action="#" class="header-bannerForm">
-                            <div class="row">
-                                <div class="columns small-12 medium-3">
-                                    <label class="header-bannerLbl" for="tpTransEmp">Tipo de Transação</label>
-                                    <select name="tipo-transacao" id="selectTpTransacao" class="header-bannerSelect">
-                                  <option value="abertura">Abertura</option>
-                                  <option value="baixa">Baixa</option>
-                                  <option value="alteracao">Alteração</option>
-                              </select>
-                                </div>
-                                <div class="columns small-12 medium-3">
-                                    <label class="header-bannerLbl" for="tpTransEmp">Tipo de Empresa</label>
-                                    <select name="tipo-empresa" id="selectTpEmpresa" class="header-bannerSelect">
-                                  <option value="matriz">Matriz</option>
-                                  <option value="filial">Filial</option>
-                                  <option value="mei">Mei</option>
-                              </select>
-                                </div>
-                                <div class="columns small-12 medium-4">
-                                    <label class="header-bannerLbl" for="tpTransEmp">Município</label>
-                                    <select name="tipo-municipio" id="selectMunicipio" class="header-bannerSelect">
-                                  <option value="rioDeJaneiro">Rio de Janeiro</option>
-                                  <option value="outrosMunicipios">Outros Municípios</option>
-                              </select>
-                                </div>
-                                <div class="columns small-12 medium-2">
-                                    <button type="submit" class="botao--azul u-md-txtBtn btn btn--tamanhoCampo" id="mudarInformacoesBtn">Mudar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <section id="containerInformacoesCards" class="infoContainer">
-                <div class="row">
-                    <div class="columns small-12" id="containerInformacoes">
-                        <script type="text/template" id="erro">
-                            <section class="alerta" id="containerErro">
-                                <div class="alertaBox--erro alertaBox alert-box">
-                                    <span class="alertaBox-icone alertaBox-icone--erro icon-blocked"></span>
-                                    <section class="alertaBox-conteudo">
-                                        <p class="alertaBox-txt alertaBox-txtErro u-bold">Não foram encontradas informações sobre as seguintes opções:</p>
-                                        <ul class="u-xsm-margemTop">
-                                            <li id="tipoTransacao" class="u-md-texto"></li>
-                                            <li id="tipEmpresa" class="u-md-texto"></li>
-                                            <li id="tipoMunicipio" class="u-md-texto"></li>
-                                        </ul>
-                                    </section>
-                                </div>
-                            </section>
-                        </script>
-                    </div>
-                </div>
-            </section>
+  <div class="container-site">
+    <div class="bannerCapa" id="bannerCapa">
+      <picture class="bannerImagem">
+        <source srcset="source/images/bg_riodejaneiro_mobile.jpg" media="(max-width: 40.063em)">
+        <source srcset="source/images/bg_riodejaneiro.jpg" media="(min-width: 40.063em)">
+        <img class="bannerImagem" src="source/images/bg_riodejaneiro.jpg" alt="Imagem do Pão de Açúcar">
+      </picture>
+      <div class="row">
+        <div class="columns small-12">
+          <h3 class="banner-header banner-header--capa">Seja Bem-Vindo!</h3>
+          <h4 class="banner-subtitulo">Encontre todas as informações para abertura, alteração e baixa de sua empresa.</h4>
+          <button id="iniciarTour" class="banner-btn">Iniciar</button>
         </div>
-
+      </div>
     </div>
+    <section id="bannerContainerPrincipal">
 
-  <script src="source/js/InformacoesEmpresas.js"></script>
+      <script type="text/template" id="containerBanner">
+        <img class="bannerFundo" src="Content/Images/fundoBanner.png" alt="Grafismo para banner">
+        <div class="bannerBox">
+          <div class="containerIlustracao">
+            <svg version="1.1" id="svgIlustracaoBanner" viewBox="0 0 433.5 287.3" preserveAspectRatio="xMinYMin meet" class="containerIlustracao-ilustracao">
+                    </svg>
+          </div>
+          <div class="banner-container">
+            <section class="banner-passo--primeiroPasso banner-passo">
+              <h3 class="banner-header">Descubra como:  </h3>
+            </section>
+          </div>
+        </div>
+      </script>
+
+      <!-- <script type="text/template" id="opcaoEscolhaBanner">
+            <div class="banner-opcForm">
+                <input name="tipo-empresa" id="" type="radio" class="icheckBtn banner-input banner-input--tpEmp" value="" />
+                <label for="" class="banner-label"></label>
+            </div>
+        </script> -->
+      <!--<script type="text/template" id="btnFormBanner">
+                <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+            </script>-->
+
+    </section>
+
+
+  </div>
+  <script src="source/js/snap.svg-min.js"></script>
+  <script src="source/js/banner.js"></script>
+
 </body>
 
 </html>
