@@ -2,7 +2,7 @@
 
 Descrição do projeto
 --------------
-Projeto em desenvolvimento, usando localStorage para persistir dados em JSON e javascript puro para manipular HTML e filtragem de dados.
+*Projeto em desenvolvimento (falta bundles, estrutura de deploy e terminar de desenvolver o banner que leva para a página que temporariamente está como a principal/index)*, usando localStorage para persistir dados em JSON e javascript puro para manipular HTML e filtragem de dados.
 
 
 
