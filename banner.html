@@ -17,12 +17,14 @@
 
 <body>
   <div class="container-site">
+
     <div class="bannerCapa" id="bannerCapa">
       <picture class="bannerImagem">
         <source srcset="source/images/bg_riodejaneiro_mobile.jpg" media="(max-width: 40.063em)">
         <source srcset="source/images/bg_riodejaneiro.jpg" media="(min-width: 40.063em)">
         <img class="bannerImagem" src="source/images/bg_riodejaneiro.jpg" alt="Imagem do Pão de Açúcar">
       </picture>
+
       <div class="row">
         <div class="columns small-12">
           <h3 class="banner-header banner-header--capa">Seja Bem-Vindo!</h3>
@@ -38,9 +40,12 @@
         <div class="bannerBox">
           <div class="containerIlustracao">
             <svg version="1.1" id="svgIlustracaoBanner" viewBox="0 0 433.5 287.3" preserveAspectRatio="xMinYMin meet" class="containerIlustracao-ilustracao">
-                </svg>
+                    </svg>
           </div>
           <div class="banner-container">
+            <input name="tipo-transacao" id="tipo-transacao" type="hidden" value="" />
+            <input name="tipo-municipio" id="tipo-municipio" type="hidden" value="" />
+            <input name="tipo-empresa" id="tipo-empresa" type="hidden" value="" />
             <section class="banner-passo--primeiroPasso banner-passo">
               <h3 class="banner-header">Descubra como:  </h3>
             </section>
@@ -48,46 +53,16 @@
         </div>
       </script>
 
-
-
-      <script type="text/template" id="opcaoEscolhaBanner">
-        <div class="banner-opcForm">
-          <input name="tipo-empresa" id="" type="radio" class="icheckBtn banner-input banner-input--tpEmp" value="" />
-          <label for="" class="banner-label"></label>
-        </div>
-      </script>
-
-      <script type="text/template" id="btnFecharBanner">
-        <a id="fecharBtn" class="banner-fechar" href="#">
-            <span class="icon-cross"></span>
-        </a>
-      </script>
-
-      <script type="text/template" id="navegacaoBanner">
-        <aside class="banner-menuOpc">
-          <nav class="banner-navegacao">
-            <ul class="banner-lista">
-              <li class="banner-item">
-                <a id="navTpEmpresaBtn" class="banner-btn banner-lnk" href="#">
-                    <span class="icon-industry banner-icone"></span>
-                    Tipo Empresa
-                </a>
-              </li>
-              <li class="banner-item">
-                <a id="navMunicipioBtn" class="banner-btn banner-lnk banner-lnk--desativado" href="#">
-                    <span class="icon-empresa banner-icone"></span>
-                    Município
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-      </script>
-
-
-      <!-- <script type="text/template" id="btnFormBanner">
-            <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+      <!-- <script type="text/template" id="opcaoEscolhaBanner">
+            <div class="banner-opcForm">
+                <input name="tipo-empresa" id="" type="radio" class="icheckBtn banner-input banner-input--tpEmp" value="" />
+                <label for="" class="banner-label"></label>
+            </div>
         </script> -->
+
+      <script type="text/template" id="btnFormBanner">
+        <button class="banner-btn banner-btn--sm banner-btn--selecionado"></button>
+      </script>
 
     </section>
 
@@ -95,7 +70,5 @@
   </div>
   <script src="source/js/snap.svg-min.js"></script>
   <script src="source/js/banner.js"></script>
-
 </body>
-
 </html>
